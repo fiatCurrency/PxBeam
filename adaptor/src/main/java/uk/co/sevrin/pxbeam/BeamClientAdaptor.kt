@@ -22,7 +22,7 @@ class BeamClientAdaptor(private val context: Context) :
         //   It is possible that we can do without the explicit machineState.
     private var machineState: Int = 0
 
-    private var bindFlag : Boolean = false
+    private var bindingFlag : Boolean = false
     private var theService: Messenger? = null
     private var clientIndex: Int = -1
 
@@ -39,12 +39,13 @@ class BeamClientAdaptor(private val context: Context) :
 
         // First stage of connection attempt
         //
-    fun connect() {
-        if (machineState == 0) {
+    fun connect() : Boolean {
+        if (!bindingFlag) {
             val intent = Intent().setClassName(servicePackage, servicePackage + serviceClass)
-            if (context.bindService(intent, this, Context.BIND_AUTO_CREATE))
-                setMachineState(1)
+            bindingFlag = context.bindService(intent, this, Context.BIND_AUTO_CREATE)
+            setMachineState( if (bindingFlag) 1 else 0 )
         }
+        return bindingFlag
     }
         // Second stage of connection attempt
         //
