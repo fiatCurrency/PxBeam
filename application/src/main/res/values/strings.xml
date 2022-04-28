@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PxBeam Test</string>
+    <string name="imperativeConnect">Connect</string>
+</resources>
