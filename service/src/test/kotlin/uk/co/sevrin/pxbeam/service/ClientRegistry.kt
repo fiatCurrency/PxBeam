@@ -1,4 +1,4 @@
-package uk.co.sevrin.pxbeamservice
+package uk.co.sevrin.pxbeam.service
 
 import android.os.IBinder
 import android.os.Messenger
