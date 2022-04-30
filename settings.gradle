@@ -14,6 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "PxBeam"
 include ':application'
-include ':adaptor'
+include ':api'
 include ':service'
 include ':common'
