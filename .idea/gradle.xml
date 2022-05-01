@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/api1" />
             <option value="$PROJECT_DIR$/api2" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/lib" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
