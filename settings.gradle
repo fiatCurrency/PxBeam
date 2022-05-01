@@ -13,6 +13,7 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "PxBeam"
+include ':app'
 include ':api1'
 include ':api2'
 include ':lib'
