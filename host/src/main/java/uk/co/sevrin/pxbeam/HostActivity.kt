@@ -63,6 +63,13 @@ class HostActivity : AppCompatActivity() {
         private val handler = Handler(looper)
         private val tag = "UpdaterThread()"
         @Volatile private var exitRequest = false
+
+        fun stopSynchronously() {
+            exitRequest = true
+            this.interrupt()
+            this.join()
+        }
+
         override fun run() {
             Log.d(tag,"Infinite loop entered")
             while (!exitRequest) {
