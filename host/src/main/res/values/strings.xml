@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PxBeam Host</string>
+    <string name="deadbeatApplicationDeclaration">This host application doesn\'t do anything</string>
 </resources>
