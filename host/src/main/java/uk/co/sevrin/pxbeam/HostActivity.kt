@@ -20,7 +20,6 @@ class HostActivity : AppCompatActivity() {
         txv = this.findViewById(R.id.txvTime)
         Log.d(tag,"<<onCreate()")
     }
-}
     override fun onStart() {
         Log.d(tag,">>onStart()")
         super.onStart()
