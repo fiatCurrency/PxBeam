@@ -17,3 +17,26 @@ class HostActivity : AppCompatActivity() {
         Log.d(tag,"<<onCreate()")
     }
 }
+    override fun onStart() {
+        Log.d(tag,">>onStart()")
+        super.onStart()
+        Log.d(tag,"<<onStart()")
+    }
+
+    override fun onResume() {
+        Log.d(tag,">>onResume()")
+        super.onResume()
+        Log.d(tag,"<<onResume()")
+    }
+
+    override fun onPause() {
+        Log.d(tag,">>onPause()")
+        super.onPause()
+        Log.d(tag,"<<onPause()")
+    }
+
+    override fun onStop() {
+        Log.d(tag,">>onStop()")
+        super.onStop()
+        Log.d(tag,"<<onStop()")
+    }
