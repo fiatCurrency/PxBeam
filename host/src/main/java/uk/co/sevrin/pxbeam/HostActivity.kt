@@ -12,6 +12,8 @@ class HostActivity : AppCompatActivity() {
 
     private val tag = "HostActivity"
     private lateinit var txv: TextView
+    private lateinit var thread: UpdaterThread
+
     override fun onCreate(sis: Bundle?) {
         Log.d(tag,">>onCreate()")
         super.onCreate(sis)
@@ -29,11 +31,15 @@ class HostActivity : AppCompatActivity() {
     override fun onResume() {
         Log.d(tag,">>onResume()")
         super.onResume()
+        thread = UpdaterThread(Looper.getMainLooper(), 250) { onTick() }
+        thread.start()
         Log.d(tag,"<<onResume()")
     }
 
     override fun onPause() {
         Log.d(tag,">>onPause()")
+        thread.stopSynchronously()
+        Log.d(tag,"Thread stopped")
         super.onPause()
         Log.d(tag,"<<onPause()")
     }
