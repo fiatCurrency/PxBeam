@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
+import java.util.*
 
 class HostActivity : AppCompatActivity() {
 
@@ -40,3 +41,15 @@ class HostActivity : AppCompatActivity() {
         super.onStop()
         Log.d(tag,"<<onStop()")
     }
+
+    private fun onTick() {
+        Log.d(tag,">>onTick()")
+        val gc = GregorianCalendar()
+        val h = gc.get(GregorianCalendar.HOUR_OF_DAY)
+        val m = gc.get(GregorianCalendar.MINUTE)
+        val s = gc.get(GregorianCalendar.SECOND)
+        val str = String.format("%02d:%02d:%02d",h,m,s)
+        txv.text = str
+        Log.d(tag,"<<onTick()")
+    }
+
