@@ -12,9 +12,9 @@ class Api2UnitTest {
     fun use_Sweep() {
         val s = Sweep(100,20,8,30,40)
         assertEquals(s.bitTime,100)
-        assertEquals(s.symbolsPerPacket,20)
-        assertEquals(s.postSymbolTime,8)
-        assertEquals(s.packetsInPacketLoop,30)
-        assertEquals(s.postPacketTime,40)
+        assertEquals(s.innerLoopCount,20)
+        assertEquals(s.innerLoopOffTime,8)
+        assertEquals(s.outerLoopCount,30)
+        assertEquals(s.outerLoopOffTime,40)
     }
 }
