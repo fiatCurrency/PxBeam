@@ -1,24 +1,17 @@
 package uk.co.sevrin.pxbeam
 /**
  * Class holding timing and repetition information for transmitting a (barcode) *Symbol*
- * a large number of times, to make for an easier capture by laser-reading devices.
+ * to make for an easier capture by laser-reading devices.
+ * Each *Symbol* is transmitted using [bitTime] to represent the LED on/off period for each bit in
+ * the bytes that make up the *Symbol* pattern.
  *
- * The repetition is broken into *Group*s, each of which transmits the *Symbol*
- * a constant number of times.
+ * There are [groupCount] *Group*s in a [BeamCycle] and each *Group* consists of [symbolsPerGroup]
+ * identical transmissions of the *Symbol*.
  *
- * @param bitTime the time corresponding to one bit in the pattern of bytes that
- * represent the *Symbol*; this is PCM.
- * @param symbolsPerGroup the number of times the *Symbol* is transmitted within
- * a *Group*.
- * @param symbolOffTime the time delay between successive transmissions of the
- * *Symbol* within each *Group*.
- * @param groupCount the number of *Group*s within the whole [BeamCycle]
- * @param groupOffTime the time delay between *Group*s within the whole [BeamCycle]
+ * Within each *Group*, transmission of each *Symbol* is followed by a period [symbolOffTime], where
+ * the LED is dark.
  *
- * For a given [BeamCycle], the *Symbol* is thus transmitted
- * [symbolsPerGroup] * [groupCount] times.
- *
- * During [symbolOffTime] and [groupOffTime], the LED is dark.
+ * Transmission of each *Group* is followed by a period [groupOffTime], where the LED is dark.
  *
  * The units of time for [bitTime], [symbolOffTime], [groupOffTime] are implementation
  * dependent.
