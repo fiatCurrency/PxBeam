@@ -10,11 +10,11 @@ class Api2UnitTest {
      */
     @Test
     fun use_BeamCycle() {
-        val s = BeamCycle(100,20,8,30,40)
-        assertEquals(s.bitTime,100)
-        assertEquals(s.symbolsPerGroup,20)
-        assertEquals(s.symbolOffTime,8)
-        assertEquals(s.groupCount,30)
-        assertEquals(s.groupOffTime,40)
+        val s = BeamCycle(100, 20, 8, 30, 40)
+        assertEquals(s.bitTime, 100)
+        assertEquals(s.symbolsPerGroup, 20)
+        assertEquals(s.symbolOffTime, 8)
+        assertEquals(s.groupCount, 30)
+        assertEquals(s.groupOffTime, 40)
     }
 }
