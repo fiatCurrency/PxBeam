@@ -1,4 +1,4 @@
-package uk.co.sevrin.myapplication
+package uk.co.sevrin.pxbeam.service
 
 import org.junit.Test
 
