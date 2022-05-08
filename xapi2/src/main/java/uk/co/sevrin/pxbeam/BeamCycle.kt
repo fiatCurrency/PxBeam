@@ -1,4 +1,5 @@
 package uk.co.sevrin.pxbeam
+
 /**
  * Class holding timing and repetition information for transmitting a (barcode) *Symbol*
  * to make for an easier capture by laser-reading devices.
@@ -20,6 +21,7 @@ package uk.co.sevrin.pxbeam
  * all fit into the range of an [Int].
  */
 
+@Suppress("KDocMissingDocumentation")
 public data class BeamCycle(
     var bitTime: Int,
     var symbolsPerGroup: Int,
