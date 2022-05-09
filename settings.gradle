@@ -12,7 +12,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "PxBeam"
+rootProject.name = "Px Beam"
 include ':library'
 include ':libraryclient'
 include ':leafapi'
