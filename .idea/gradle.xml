@@ -11,10 +11,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/leafapi" />
-            <option value="$PROJECT_DIR$/host" />
             <option value="$PROJECT_DIR$/lib" />
             <option value="$PROJECT_DIR$/service" />
             <option value="$PROJECT_DIR$/utility" />
+            <option value="$PROJECT_DIR$/libraryclient" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
